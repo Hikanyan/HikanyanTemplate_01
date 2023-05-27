@@ -1,7 +1,12 @@
 using System;
+using Unity.VisualScripting;
 using UnityEngine;
 namespace Hikanyan.Core
 {
+    /// <summary>
+    /// 継承してSingleton使用します。
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
     public abstract class AbstractSingleton<T> : MonoBehaviour where T : Component
     {
         private static T _instance;
@@ -36,6 +41,11 @@ namespace Hikanyan.Core
             {
                 Destroy(gameObject);
             }
+            OnAwake();
         }
+        /// <summary>
+        /// 継承先でAwakeが必要な場合
+        /// </summary>
+        protected virtual void OnAwake() { }
     }
 }
