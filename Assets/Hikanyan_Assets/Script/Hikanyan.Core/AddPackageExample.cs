@@ -18,7 +18,6 @@ namespace Hikanyan.Core
         {
             "https://github.com/neuecc/UniRx.git?path=Assets/Plugins/UniRx/Scripts",
             "https://github.com/Cysharp/UniTask.git?path=src/UniTask/Assets/Plugins/UniTask",
-            "https://github.com/Demigiant/dotween.git"
         };
 
             foreach (string packageId in packageIds)

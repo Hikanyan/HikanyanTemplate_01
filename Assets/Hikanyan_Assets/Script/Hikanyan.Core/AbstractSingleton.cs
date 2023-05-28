@@ -5,6 +5,7 @@ namespace Hikanyan.Core
 {
     /// <summary>
     /// 継承してSingleton使用します。
+    /// 継承先でAwakeが必要な場合OnAwake()を呼んでください。
     /// </summary>
     /// <typeparam name="T"></typeparam>
     public abstract class AbstractSingleton<T> : MonoBehaviour where T : Component
