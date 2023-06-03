@@ -2,18 +2,18 @@
 
 <h1>HikanyanTemplate</h1>
 
-Unity�̃o�[�W����2021.3.16f1
+Unityのバージョン2021.3.16f1
 
-<h1> �����K���̃��[�� </h1>
-<h3> �v���C�x�[�g�ł��S�ďC���q��t���� </h3>
-�E_�ϐ���<br>
-�E�p�u���b�N�͐擪�啶��<br>
+<h1> 命名規則のルール </h1>
+<h3> プライベートでも全て修飾子を付ける </h3>
+・_変数名<br>
+・パブリックは先頭大文字<br>
 
-<h1> ���̑��ׂ������[�� </h1>
-�E�C���X�y�N�^�[�ɕ\������ϐ��ɂ�[Tooltip]�A�����łȂ����̂ɂ�summary���g�p����<br>
+<h1> その他細かいルール </h1>
+・インスペクターに表示する変数には[Tooltip]、そうでないものにはsummaryを使用する<br>
 <br>
 
-<h1>Git�̃R�~�b�g���b�Z�[�W</h1>
-�yAdd�z �V�K�i�t�@�C���j�@�\�ǉ�<br>
-�yUpdate�z�@�\�C���i�o�O�ł͂Ȃ��j<br>
-�yRemove�z�폜�i�t�@�C���j<br>
+<h1>Gitのコミットメッセージ</h1>
+【Add】 新規（ファイル）機能追加<br>
+【Update】機能修正（バグではない）<br>
+【Remove】削除（ファイル）<br>

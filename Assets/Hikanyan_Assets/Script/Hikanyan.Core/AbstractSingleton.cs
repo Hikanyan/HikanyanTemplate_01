@@ -4,8 +4,8 @@ using UnityEngine;
 namespace Hikanyan.Core
 {
     /// <summary>
-    /// Œp³‚µ‚ÄSingletong—p‚µ‚Ü‚·B
-    /// Œp³æ‚ÅAwake‚ª•K—v‚Èê‡OnAwake()‚ğŒÄ‚ñ‚Å‚­‚¾‚³‚¢B
+    /// ç¶™æ‰¿ã—ã¦Singletonä½¿ç”¨ã—ã¾ã™ã€‚
+    /// ç¶™æ‰¿å…ˆã§AwakeãŒå¿…è¦ãªå ´åˆOnAwake()ã‚’å‘¼ã‚“ã§ãã ã•ã„ã€‚
     /// </summary>
     /// <typeparam name="T"></typeparam>
     public abstract class AbstractSingleton<T> : MonoBehaviour where T : Component
@@ -45,7 +45,7 @@ namespace Hikanyan.Core
             OnAwake();
         }
         /// <summary>
-        /// Œp³æ‚ÅAwake‚ª•K—v‚Èê‡
+        /// ç¶™æ‰¿å…ˆã§AwakeãŒå¿…è¦ãªå ´åˆ
         /// </summary>
         protected virtual void OnAwake() { }
     }
