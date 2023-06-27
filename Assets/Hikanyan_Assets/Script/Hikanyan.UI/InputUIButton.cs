@@ -1,32 +1,38 @@
-using UnityEngine;
-using UnityEngine.EventSystems;
-
+using System;
+using DG.Tweening;  
+using UnityEngine;  
+using UnityEngine.EventSystems;  
 namespace Hikanyan.UI
 {
-    public abstract class InputUIButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
+    public class InputUIButton : MonoBehaviour,IPointerEnterHandler, IPointerClickHandler, IPointerDownHandler, IPointerUpHandler  
     {
-        protected bool isPressed = false;
+        public Action onClickCallback;  
+        private CanvasGroup _canvasGroup;
 
-        /// <summary>
-        /// クリックしたときの処理を実装する
-        /// </summary>
-        protected virtual void OnPointerDown() { }
-
-        /// <summary>
-        /// クリックを離したときの処理を実装する
-        /// </summary>
-        protected virtual void OnPointerUp() { }
-
-        public void OnPointerDown(PointerEventData eventData)
+        private void Start()
         {
-            isPressed = true;
-            OnPointerDown();
+            _canvasGroup = GetComponent<CanvasGroup>();
         }
 
-        public void OnPointerUp(PointerEventData eventData)
+        public void OnPointerClick(PointerEventData eventData)  
         {
-            isPressed = false;
-            OnPointerUp();
+            onClickCallback?.Invoke();  
+        }
+
+        public void OnPointerDown(PointerEventData eventData)  
+        {
+            transform.DOScale(0.95f, 0.24f).SetEase(Ease.OutCubic);  
+            _canvasGroup.DOFade(0.8f, 0.24f).SetEase(Ease.OutCubic);  
+        }
+
+        public void OnPointerUp(PointerEventData eventData)  
+        {
+            transform.DOScale(1f, 0.24f).SetEase(Ease.OutCubic);  
+            _canvasGroup.DOFade(1f, 0.24f).SetEase(Ease.OutCubic);  
+        }
+        // マウスが侵入した時
+        public void OnPointerEnter(PointerEventData eventData) {
+            Debug.Log ("マウスが侵入");
         }
     }
 }
