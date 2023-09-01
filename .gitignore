@@ -63,3 +63,4 @@ ProjectSettings/*
 UserSettings/*
 .vsconfig
 
+.idea/
